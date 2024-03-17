@@ -1,6 +1,3 @@
-
-Sure, here's a basic README template for your Airflow DAG script:
-
 Weather DAG
 This Airflow DAG script retrieves weather data for Houston using the OpenWeatherMap API, transforms the data, and saves it to an Amazon S3 bucket as a CSV file.
 
