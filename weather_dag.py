@@ -46,10 +46,11 @@ def transform_load_data(task_instance):
     transformed_data_list = [transformed_data]
     df_data = pd.DataFrame(transformed_data_list)
     
+    
     now = datetime.now()
     dt_string = now.strftime("%d%m%Y%H%M%S")
     dt_string = 'current_weather_data_houston_' + dt_string
-    df_data.to_csv(f"{dt_string}.csv", index=False)
+    df_data.to_csv(f"s3://031724open-weather-api-youtubebucket/dt_string.csv", index=False, storage_options=aws_credentials) # changed from saving on VM to s3 bucket
 
 
 
